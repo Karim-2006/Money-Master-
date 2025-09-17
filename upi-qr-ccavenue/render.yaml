@@ -7,9 +7,9 @@ services:
   - type: web
     name: upi-qr-backend
     env: node
-    buildCommand: npm install --prefix backend
+    buildCommand: npm install
     startCommand: npm start
-    rootDir: backend/
+    rootDir: upi-qr-ccavenue/backend/
     # A free web service is spun down after 15 minutes of inactivity.
     # To keep it alive, you can set up a cron job to ping it regularly.
     # For example, using https://cron-job.org/ or similar services.
@@ -20,7 +20,7 @@ services:
     name: upi-qr-frontend
     buildCommand: echo "No build command for static frontend"
     staticPublishPath: frontend/
-    rootDir: .
+    rootDir: upi-qr-ccavenue/frontend/
     # If your frontend requires a build step (e.g., React, Vue, Angular),
     # replace the buildCommand with the appropriate command (e.g., npm run build).
     # Then, update staticPublishPath to the directory where your built assets are located (e.g., build, dist).
