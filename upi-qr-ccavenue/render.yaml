@@ -9,7 +9,7 @@ services:
     env: node
     buildCommand: npm install
     startCommand: npm start
-    rootDir: upi-qr-ccavenue/backend/src/
+    rootDir: upi-qr-ccavenue/backend/
     # A free web service is spun down after 15 minutes of inactivity.
     # To keep it alive, you can set up a cron job to ping it regularly.
     # For example, using https://cron-job.org/ or similar services.
