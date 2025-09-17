@@ -7,7 +7,7 @@ services:
   - type: web
     name: upi-qr-backend
     env: node
-    buildCommand: npm install
+    buildCommand: npm install --prefix backend
     startCommand: npm start
     rootDir: backend/
     # A free web service is spun down after 15 minutes of inactivity.
