@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const checkStatusBtn = document.getElementById('checkStatusBtn');
-    const paymentStatusResultDiv = document.getElementById('paymentStatusResult');
+    const paymentStatusResultDiv = document.getElementById('statusResult');
 
     checkStatusBtn.addEventListener('click', async (e) => {
         e.preventDefault();
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const orderId = document.getElementById('orderId').value;
 
         try {
-            const response = await fetch(`/api/payment-status/${orderId}`);
+            const response = await fetch(`http://127.0.0.1:5000/api/payment-status/${orderId}`);
             const data = await response.json();
 
             if (response.ok) {

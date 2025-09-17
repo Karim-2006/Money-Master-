@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchPaymentHistory = async () => {
         try {
-            const response = await fetch('/api/history');
+            const response = await fetch('http://127.0.0.1:5000/api/history');
             const data = await response.json();
 
             if (response.ok) {

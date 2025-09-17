@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const payerEmail = document.getElementById('email').value;
 
         try {
-            const response = await fetch('/api/generate-qr', {
+            const response = await fetch('http://127.0.0.1:5000/api/generate-qr', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
