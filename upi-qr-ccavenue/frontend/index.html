@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI QR Code Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate UPI QR Code</h1>
+        <form id="qrForm">
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="orderId">Order ID:</label>
+                <input type="text" id="orderId" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email (Optional):</label>
+                <input type="email" id="email">
+            </div>
+            <button type="submit">Generate QR</button>
+        </form>
+        <div id="qrCodeContainer" class="qr-code-container">
+            <!-- QR Code will be displayed here -->
+        </div>
+        <div id="paymentStatus" class="payment-status">
+            <!-- Payment status will be displayed here -->
+        </div>
+        <div class="links">
+            <a href="payment-status.html">Check Payment Status</a>
+            <a href="history.html">View Payment History</a>
+        </div>
+    </div>
+    <script src="js/qr.js"></script>
+</body>
+</html>
