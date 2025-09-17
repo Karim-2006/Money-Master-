@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Serve static files from the frontend directory
-app.use(express.static(path.join(__dirname, '..', 'frontend')));
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'public')));
 
 // Routes
 app.use('/api', qrRoutes);
