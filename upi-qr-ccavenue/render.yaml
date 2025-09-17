@@ -1,0 +1,26 @@
+# For more information on render.yaml see https://render.com/docs/yaml-spec
+# This file specifies how to deploy your services on Render.
+# It includes a Node.js web service for the backend and a static site for the frontend.
+
+services:
+  # Backend Service
+  - type: web
+    name: upi-qr-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: backend/
+    # A free web service is spun down after 15 minutes of inactivity.
+    # To keep it alive, you can set up a cron job to ping it regularly.
+    # For example, using https://cron-job.org/ or similar services.
+    # Alternatively, upgrade to a paid plan for always-on services.
+
+  # Frontend Service
+  - type: static
+    name: upi-qr-frontend
+    buildCommand: echo "No build command for static frontend"
+    staticPublishPath: frontend/
+    rootDir: .
+    # If your frontend requires a build step (e.g., React, Vue, Angular),
+    # replace the buildCommand with the appropriate command (e.g., npm run build).
+    # Then, update staticPublishPath to the directory where your built assets are located (e.g., build, dist).
